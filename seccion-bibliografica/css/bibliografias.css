@@ -1,0 +1,201 @@
+:root{
+    --fuentePrincipal:'Montserrat', sans-serif;;
+    --fuenteSecundaria: 'Oswald', sans-serif;
+    --rojo:#FF0000;
+    --blanco:#FFFFFF;
+    --negro:#121212;
+    --letra:#000000;
+    --btn:#303030;
+    --gris:#404040;
+
+}
+
+
+html {
+
+    box-sizing: border-box;
+    font-size: 62.5%;/*1 rem = 10pixeles*/
+    
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    background-color: var(--blanco);
+    color: var(--letra);
+    line-height: 1.5;
+}
+
+  
+
+
+p{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+
+}
+/* Utilidades */
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+
+.btn{
+
+    all: unset;
+    color: var(--negro) ;
+    padding: 1rem;
+    transition: background-color 400ms,box-shadow 400ms,transform 600ms,color,background-image;
+    cursor: pointer;
+   border: 1px solid var(--btn);
+    color: var(--negro);
+    margin-top:2rem;
+    width: 90%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn:hover{
+    background-color: var(--btn);
+    color:var(--blanco);
+    box-shadow: 1px 1px 10px 1px var(--btn);
+    transform: scale(1.03);
+    
+}
+
+
+
+/* Main */
+
+
+.libros__heading{
+    text-align: center;
+    padding: 4rem;
+    font-size: 4rem;
+}
+
+.libros__grid{
+    display: grid;
+    row-gap: 4rem;
+}
+
+.libro{
+    background-color: var(--blanco);
+    border: 0.5px solid #c1c1c1c1;
+    padding: 3rem;
+    border-radius:1rem ;
+}
+
+
+
+@media (min-width: 1200px) {
+    .libro__grid{
+        display: grid;
+        grid-template-rows: unset;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+
+
+
+
+.libro__imagen{
+    width:100%;
+    height: 90%;
+    border-radius: 1rem;
+}
+
+@media (min-width: 1200px) {
+    .libro__imagen{
+        
+
+        height: 40rem;
+    }
+}
+
+
+.libro__nombre{
+    font-size: 2.5rem;
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .libro__nombre{
+        text-align:start;
+        padding: 0;
+    }
+}
+.libro__contenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+    
+}
+@media (min-width: 768px) {
+    .libro__contenido{
+        text-align:left;
+    }
+}
+.libro__descripcion{
+    display: flex;
+    gap: 3rem;
+     text-align: justify;
+    flex-direction: column;
+    
+
+}
+
+@media(min-width:768px){
+    .libro__descripcion{
+        flex-direction: row;
+    }
+}
+
+
+.libro__critica{
+    margin-top: 2rem;
+    text-align: justify;
+}
+
+
+@media (min-width:768px){
+    .libro__botones{
+        display: flex;
+        gap: 2rem;
+        justify-content: space-between;
+    }
+}
+.libro__btn::before{
+    content:'';
+    background-image: url(../img/Logo1.png);
+    display: block;
+    width: 2.4rem;
+   
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 1rem;
+    transition: background-image 100ms;
+}
+
+
+.libro__btn:hover::before{
+    
+    background-image: url(../img/Logo2.png);
+   
+}
